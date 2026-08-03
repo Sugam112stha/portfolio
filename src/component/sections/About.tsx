@@ -24,34 +24,44 @@ const About = () => {
               experiences.
             </p>
           </div>
-          <div className="bg-slate-50 rounded-3xl p-8 shadow-lg">
+          <div className="bg-slate-50 rounded-3xl p-10 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
             <h3 className="text-2xl font-bold mb-8">Education</h3>
 
             <div className="space-y-8">
               <div>
-                <p className="text-blue-600 font-semibold">2024 - Present</p>
-
+                <p className="text-blue-600 font-semibold border-l-4 border-blue-600 pl-5">
+                    2024 - Present
+                </p>
                 <h4 className="text-xl font-semibold">
                   BSc (Hons) Information Technology
                 </h4>
-
-                <p className="text-slate-600">Itahari International College</p>
+                <p className="text-slate-600">
+                    Itahari International College(IIC)
+                </p>
               </div>
 
               <div>
-                <p className="text-blue-600 font-semibold">2021 - 2023</p>
-
-                <h4 className="text-xl font-semibold">+2 Management</h4>
-
-                <p className="text-slate-600"> Koshi st James</p>
+                <p className="text-blue-600 font-semibold border-l-4 border-blue-600 pl-5">
+                    2021 - 2023
+                </p>
+                <h4 className="text-xl font-semibold">
+                    +2 Management
+                </h4>
+                <p className="text-slate-600">
+                    Koshi st James
+                </p>
               </div>
 
               <div>
-                <p className="text-blue-600 font-semibold">Completed</p>
-
-                <h4 className="text-xl font-semibold">SEE</h4>
-
-                <p className="text-slate-600"> Secondary Boarding School</p>
+                <p className="text-blue-600 font-semibold border-l-4 border-blue-600 pl-5">
+                    Completed
+                </p>
+                <h4 className="text-xl font-semibold">
+                    SEE
+                </h4>
+                <p className="text-slate-600"> 
+                    Secondary Boarding School
+                </p>
               </div>
             </div>
           </div>
