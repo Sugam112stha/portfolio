@@ -1,8 +1,10 @@
+import Navbar from "./component/layouts/Navbar"
+
 function App() {
   return (
-    <div>
-      Portfolio Website
-    </div>
+    <>
+    <Navbar/>
+    </>
   )
 }
 
