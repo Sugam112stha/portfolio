@@ -8,7 +8,6 @@ const Navbar = () => {
         "Skills",
         "Projects",
         "Experiences",
-        "Education",
         "Contact",
     ];
   return (

@@ -1,9 +1,9 @@
 import { FiDownload } from "react-icons/fi";
 import ProfileImage from "../../assets/images/pic1.jpeg";
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section className="flex flex-1 p-10 min-h-screen items-center">
+    <section id="home" className="flex flex-1 p-10 min-h-screen items-center">
       <div className="max-w-7xl mx-auto pt-16">
         <div className="space-y-6">
           <p className="text-lg text-blue-400 font-medium"> Hello, I'm</p>
@@ -22,8 +22,14 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center gap-5">
-            <button className="px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105"> Hire me </button>
-            <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105"> <FiDownload /> Download CV </button>
+
+            <button className="px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105">
+                Hire me 
+            </button>
+            <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105"> <FiDownload /> 
+                Download CV 
+            </button>
+            
           </div>
         </div>
       </div>
@@ -35,4 +41,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
