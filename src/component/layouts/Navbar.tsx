@@ -1,4 +1,14 @@
 const Navbar = () => {
+
+    const navlinks = [
+        "Home",
+        "About",
+        "Skills",
+        "Projects",
+        "Experiences",
+        "Education",
+        "Contact",
+    ];
   return (
     <>
     <nav className="sticky top-0 z-50 w-full bg-slate-900">
@@ -6,13 +16,10 @@ const Navbar = () => {
             <h1 className="text-3xl font-bold tracking-wide">Zorik <span className="text-blue-400">.</span></h1>
 
             <ul className="flex gap-10">
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Experience</li>
-                <li>Education</li>
-                <li>Contact</li>
+                {navlinks.map((link)=> (
+                    <li key={link} > {link}
+                    </li>
+                ))}
             </ul>
 
             <button className="p-3 duration-500 transition-all bg-blue-600 hover:bg-blue-500 ">Download Resume</button>
