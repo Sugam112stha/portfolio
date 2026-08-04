@@ -3,7 +3,7 @@ import { GrOracle } from "react-icons/gr";
 import {SiTypescript, SiJavascript, SiTailwindcss, SiHtml5, SiCss, SiMysql, SiJupyter, SiNodedotjs, SiExpress,} from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
-const skillcategory = [
+const skillCategories = [
     {
     title: "Frontend",
     skills: [
@@ -101,10 +101,10 @@ const skillcategory = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto py-6">
             <div className="mb-16">
-                <h2 className="text-5xl font-bold text-slate-900">
+                <h2 className="text-5xl md:text-6xl tracking-tight font-bold text-slate-900">
                     My Tech Stack
                 </h2>
 
@@ -117,20 +117,20 @@ const Skills = () => {
             </div>
             <div className="space-y-16">
                 {
-                    skillcategory.map((category) =>(
-                        <div key={category.title}>
+                    skillCategories.map((categories) =>(
+                        <div key={categories.title}>
                             <h3 className="font-semibold text-3xl text-slate-900 mb-8">
-                                {category.title}
+                                {categories.title}
                             </h3>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                                 {
-                                category.skills.map((skill) => {
-                                    const Icon = skill.icon;
+                                categories.skills.map((tech) => {
+                                    const Icon = tech.icon;
                                     return (
-                                    <div key={skill.name} className="group bg-white border border-slate-200 rounded-3xl p-8 flex flex-col items-center justify-center gap-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
-                                        <Icon className="text-5xl text-slate-700 transition-all duration-300 group-hover:text-blue-600" />
+                                    <div key={tech.name} className="group bg-white border border-slate-200 rounded-3xl p-10 flex flex-col items-center justify-center gap-5 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:scale-105 hover:border-blue-500 hover:shadow-2xl">
+                                        <Icon className="text-6xl text-slate-700 transition-all duration-300 group-hover:text-blue-600" />
                                         <h4 className="text-lg font-semibold text-slate-900">
-                                            {skill.name}
+                                            {tech.name}
                                         </h4>
                                     </div>
                                     );})

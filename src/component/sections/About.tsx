@@ -8,7 +8,7 @@ const About = () => {
             BEHIND <br />
             THE CODE
           </h2>
-          <div className="w-52 h-[2px] bg-slate-200"></div>
+          <div className="w-52 h-0.5 bg-slate-200"></div>
         </div>
         <div className="grid grid-cols-2 gap-24 items-start">
           <div>
