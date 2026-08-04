@@ -1,45 +1,103 @@
+import {FaReact, FaJava, FaPython, FaGitAlt, FaGithub, FaDocker,} from "react-icons/fa";
+import { GrOracle } from "react-icons/gr";
+import {SiTypescript, SiJavascript, SiTailwindcss, SiHtml5, SiCss, SiMysql, SiJupyter, SiNodedotjs, SiExpress,} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+
 const skillcategory = [
     {
-        title : "Frontend",
-        skills : [
-            "React",
-            "TailWind CSS",
-            "TypeScript",
-            "HTML",
-            "CSS"
-        ],
+    title: "Frontend",
+    skills: [
+      {
+        name: "React",
+        icon: FaReact,
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
+      },
+      {
+        name: "HTML",
+        icon: SiHtml5,
+      },
+      {
+        name: "CSS",
+        icon: SiCss,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+      },
+    ],
+  },
+  {
+  title: "Programming",
+  skills: [
+    {
+      name: "Java",
+      icon: FaJava,
     },
     {
-        title : "Programming",
-        skills : [
-            "Java",
-            "Python"
-        ],
+      name: "Python",
+      icon: FaPython,
+    },
+  ],
+},
+{
+  title: "Database",
+  skills: [
+    {
+      name: "MySQL",
+      icon: SiMysql,
     },
     {
-        title : "Database",
-        skills : [
-            "MySQL",
-            "Oracle SQL",
-        ],
+      name: "Oracle SQL",
+      icon: GrOracle,
+    },
+  ],
+},
+{
+  title: "Tools",
+  skills: [
+    {
+      name: "Git",
+      icon: FaGitAlt,
     },
     {
-        title : "Backend",
-        skills : [
-            "Node.js",
-            "Express.js",
-        ],
+      name: "GitHub",
+      icon: FaGithub,
     },
     {
-        title : "Tools",
-        skills : [
-            "GitHub",
-            "Vs Code",
-            "Docker",
-            "Jupyter Notebook",
-        ],
+      name: "VS Code",
+      icon: VscVscode,
     },
-]
+    {
+      name: "Docker",
+      icon: FaDocker,
+    },
+    {
+      name: "Jupyter Notebook",
+      icon: SiJupyter,
+    },
+  ],
+},
+{
+  title: "Currently Learning",
+  skills: [
+    {
+      name: "Node.js",
+      icon: SiNodedotjs,
+    },
+    {
+      name: "Express.js",
+      icon: SiExpress,
+    },
+  ],
+},
+];
 
 const Skills = () => {
   return (
@@ -66,13 +124,16 @@ const Skills = () => {
                             </h3>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                                 {
-                                    category.skills.map((skill)=>(
-                                        <div key={skill} className="bg-white rounded-3xl border border-slate-200 shadow-md p-8 flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
-                                            <h4 className="text-lg font-semibold text-slate-900">
-                                                {skill}
-                                            </h4>
-                                        </div>
-                                    ))
+                                category.skills.map((skill) => {
+                                    const Icon = skill.icon;
+                                    return (
+                                    <div key={skill.name} className="group bg-white border border-slate-200 rounded-3xl p-8 flex flex-col items-center justify-center gap-5 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl">
+                                        <Icon className="text-5xl text-slate-700 transition-all duration-300 group-hover:text-blue-600" />
+                                        <h4 className="text-lg font-semibold text-slate-900">
+                                            {skill.name}
+                                        </h4>
+                                    </div>
+                                    );})
                                 }
                             </div>
                         </div>
