@@ -8,9 +8,9 @@ const About = () => {
             BEHIND <br />
             THE CODE
           </h2>
-          <div className="w-150 h-0.5 bg-slate-300 my-8"></div>
+          <div className="w-52 h-[2px] bg-slate-200"></div>
         </div>
-        <div className="grid grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-2 gap-24 items-start">
           <div>
             <p className="text-slate-600 leading-9">
               I am Sugam Shrestha, a passionate Frontend Developer from Nepal
