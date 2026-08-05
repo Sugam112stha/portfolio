@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
     <nav className="sticky top-0 z-50 w-full bg-slate-900">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8 text-white">
-            <h1 className="text-3xl font-bold tracking-wide">Zorik <span className="text-blue-400">.</span></h1>
+            <h1 className="text-3xl font-bold tracking-wide hover:text-blue-500 transition-all duration-300">Zorik <span className="text-blue-400">.</span></h1>
 
             <ul className="hidden lg:flex items-center gap-10">
                 {navlinks.map((link)=> (

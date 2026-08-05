@@ -1,18 +1,18 @@
 const About = () => {
   return (
-    <section id="about" className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="about" className="py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-6xl font-black text-slate-900 leading-tight mt-6">
-            THE STORY <br />
-            BEHIND <br />
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+            THE STORY <br className="hidden lg:block" />
+            BEHIND <br className="hidden lg:block" />
             THE CODE
           </h2>
           <div className="w-52 h-0.5 bg-slate-200"></div>
         </div>
-        <div className="grid grid-cols-2 gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div>
-            <p className="text-slate-600 leading-9">
+            <p className="max-w-xl text-base md:text-lg text-slate-600 leading-9">
               I am Sugam Shrestha, a passionate Frontend Developer from Nepal
               currently pursuing a BSc (Hons) in Information Technology at
               Itahari International College. I enjoy building modern,
@@ -24,11 +24,11 @@ const About = () => {
               experiences.
             </p>
           </div>
-          <div className="bg-slate-50 rounded-3xl p-10 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <h3 className="text-2xl font-bold mb-8">Education</h3>
+          <div className="bg-slate-50 rounded-3xl p-6 lg:p-10 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8">Education</h3>
 
             <div className="space-y-8">
-              <div>
+              <div className="space-y-2">
                 <p className="text-blue-600 font-semibold border-l-4 border-blue-600 pl-5">
                     2024 - Present
                 </p>
