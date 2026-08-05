@@ -118,7 +118,7 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-slate-50">
+    <section id="skills" className="py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto py-6">
             <div className="mb-16">
                 <h2 className="text-5xl md:text-6xl tracking-tight font-bold text-slate-900">
@@ -130,21 +130,22 @@ const Skills = () => {
                     and tools I use to build modern web applications while 
                     continuously learning new skills.
                 </p>
-                <div className="w-48 h-0.5 bg-blue-500 mt-8 rounded-full"></div>
+                <div className="w-48 h-[2px] bg-blue-500 mt-8 rounded-full"></div>
             </div>
-            <div className="space-y-16">
+            <div className="space-y-20">
                 {
                     skillCategories.map((categories) =>(
                         <div key={categories.title}>
                             <h3 className="font-semibold text-3xl text-slate-900 mb-8">
                                 {categories.title}
                             </h3>
+                            <div className="w-20 h-1 bg-blue-500 rounded-full mb-8"></div>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                                 {
                                 categories.skills.map((tech) => {
                                     const Icon = tech.icon;
                                     return (
-                                    <div key={tech.name} className="group bg-white border border-slate-200 rounded-3xl p-10 flex flex-col items-center justify-center gap-5 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:scale-105 hover:border-blue-500 hover:shadow-2xl">
+                                    <div key={tech.name} className="min-h-[220px] group bg-white border border-slate-200 rounded-3xl p-10 flex flex-col items-center justify-center gap-5 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:scale-105 hover:border-blue-500 hover:shadow-2xl">
                                         <Icon className={`${tech.color} text-6xl transition-all duration-300 group-hover:scale-110`}/>
                                         <h4 className="text-lg font-semibold text-slate-900">
                                             {tech.name}

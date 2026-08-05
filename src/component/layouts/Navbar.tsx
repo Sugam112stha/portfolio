@@ -1,6 +1,8 @@
-import { FiDownload } from "react-icons/fi";
+import { FiDownload, FiMenu, FiX } from "react-icons/fi";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navlinks = [
         "Home",
@@ -16,7 +18,7 @@ const Navbar = () => {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8 text-white">
             <h1 className="text-3xl font-bold tracking-wide">Zorik <span className="text-blue-400">.</span></h1>
 
-            <ul className="flex items-center gap-10">
+            <ul className="hidden lg:flex items-center gap-10">
                 {navlinks.map((link)=> (
                     <li key={link} className="cursor-pointer text-slate-300 transition-all duration-300 hover:text-blue-500 hover:scale-105"
                      > {link}
@@ -24,10 +26,36 @@ const Navbar = () => {
                 ))}
             </ul>
 
-            <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-medium shadow-lg duration-500 transition-all bg-blue-600 hover:bg-blue-500 hover:-translate-y-1"> <FiDownload /> Download Resume 
+            <button className="hidden lg:flex items-center gap-2 px-6 py-3 rounded-lg font-medium shadow-lg duration-500 transition-all bg-blue-600 hover:bg-blue-500 hover:-translate-y-1"> <FiDownload /> Download Resume 
+            </button>
+            <button className="lg:hidden text-3xl text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                {isMenuOpen ? <FiX /> : <FiMenu />}
             </button>
         </div>
     </nav>
+    {
+  isMenuOpen && (
+    <div className="lg:hidden bg-slate-900 border-t border-slate-800">
+      <ul className="flex flex-col items-center py-6 gap-6">
+        {navlinks.map((link) => (
+          <li
+            key={link}
+            className="text-slate-300 hover:text-blue-500 transition-all duration-300 cursor-pointer"
+          >
+            {link}
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex justify-center pb-6">
+        <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 transition-all duration-300">
+          <FiDownload />
+          Download Resume
+        </button>
+      </div>
+    </div>
+  )
+}
     </>
   )
 }
