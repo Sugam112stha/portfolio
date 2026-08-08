@@ -7,7 +7,7 @@ const Contact = () => {
         {/* Heading */}
         <div className="mb-14">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">
-            Let's built something together.
+            Let's Work together.
           </h2>
 
           <p className="mt-5 max-w-2xl text-base md:text-lg leading-7 md:leading-8 text-slate-500">
@@ -23,7 +23,7 @@ const Contact = () => {
           {/* Left Card */}
           <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-lg">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Let's work together.
+              Have a project in mind?
             </h3>
 
             <p className="mt-5 max-w-lg text-base md:text-lg leading-7 md:leading-8 text-slate-600">
@@ -31,6 +31,18 @@ const Contact = () => {
               projects. If you have an idea or would like to work together, feel
               free to reach out.
             </p>
+            <a href="mailto:sugamstha619@gmail.com?subject=Let's%20Work%20Together"
+              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-300 hover:bg-blue-500 hover:-translate-y-1 hover:shadow-lg">
+              Let's Talk
+            </a>
+            <h2 className="mt-5 space-y-2 font-semibold text-xl text-slate-800">
+                Currently open to :
+            </h2>
+            <ul className="mt-5 space-y-2 text-slate-600">
+              <li className="list-disc ml-5">Freelance projects</li>
+              <li className="list-disc ml-5">Collaborations</li>
+              <li className="list-disc ml-5">Frontend opportunities</li>
+            </ul>
           </div>
 
           {/* Right Card */}
@@ -48,7 +60,7 @@ const Contact = () => {
 
                 <div>
                   <p className="text-sm font-medium text-slate-500">Email</p>
-                  <a href="mailto:your@email.com"
+                  <a href="mailto:sugamstha619@gmail.com"
                     className="text-base font-semibold text-slate-900 transition-colors hover:text-blue-600">
                     sugamstha619@gmail.com
                   </a>
@@ -94,12 +106,11 @@ const Contact = () => {
 
                 <div>
                   <p className="text-sm font-medium text-slate-500">GitHub</p>
-                  <a
-                    href="https://github.com/Sugam112stha"
+                  <a href="https://github.com/Sugam112stha"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-base font-semibold text-slate-900 transition-colors hover:text-blue-600">
-                    Connect in GitHub 
+                    Connect in GitHub
                   </a>
                 </div>
               </div>
