@@ -32,6 +32,27 @@ const Experience = () => {
             components, integrating APIs, implementing caching, and debugging
             frontend applications.
           </p>
+          <div className="flex flex-wrap gap-3 mt-7">
+            <span className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+              React.js
+            </span>
+
+            <span className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+              Next.js
+            </span>
+
+            <span className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+              TypeScript
+            </span>
+
+            <span className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+              Tailwind CSS
+            </span>
+
+            <span className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 font-medium text-sm">
+              API Integration
+            </span>
+          </div>
         </div>
       </div>
     </section>
