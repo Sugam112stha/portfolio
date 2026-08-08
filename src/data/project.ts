@@ -1,8 +1,6 @@
-import AlphaMart from "../assets/projects/alpha-mart.png";
-import Himaaus from "../assets/projects/himaaus-dashboard.png";
-import Gym from "../assets/projects/gym-system.png";
-
-export const projects = [
+import AlphaMart from "../../src/assets/project/alpha-mart.png"
+import Himaaus from "../../src/assets/project/himaaus-dashboard.png"
+const projects = [
   {
     id: 1,
     title: "Alpha Mart",
@@ -19,9 +17,7 @@ export const projects = [
       "Tailwind CSS",
       "Django",
     ],
-
-    github: "",
-
+    
     live: "",
 
     featured: true,
@@ -45,35 +41,10 @@ export const projects = [
       "Tailwind CSS",
     ],
 
-    github: "",
+    live: "https://himaaus-dash.vercel.app/",
 
-    live: "",
-
-    featured: false,
-  },
-
-  {
-    id: 3,
-
-    title: "Gym Membership System",
-
-    subtitle: "Desktop Management System",
-
-    description:
-      "A Java Swing desktop application for managing gym members and memberships.",
-
-    image: Gym,
-
-    technologies: [
-      "Java",
-      "Swing",
-      "MySQL",
-    ],
-
-    github: "",
-
-    live: "",
-
-    featured: false,
+    featured: true,
   },
 ];
+
+export default projects;
