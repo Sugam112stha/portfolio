@@ -16,10 +16,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
   <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:translate-y-2 hover:shadow-2xl">
-    <img
-    src={image}
-    alt={title}
-    className="w-full p-2 h-56 object-cover transition-transform duration-500 rounded-xl group-hover:scale-105"/>
+   
     <div className="p-6">
       <p className="text-sm font-medium text-blue-600">
         {subtitle}
@@ -30,6 +27,10 @@ const ProjectCard = ({
       <p className="mt-4 leading-7 text-slate-600">
         {description}
       </p>
+       <img
+        src={image}
+        alt={title}
+        className="w-full p-2 h-56 object-cover transition-transform duration-500 rounded-xl group-hover:scale-105"/>
       <div className="my-5 flex flex-wrap gap-2">
         {technologies.map((tech) => (
           <span key={tech}
@@ -44,8 +45,7 @@ const ProjectCard = ({
           href={live}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-500"
-        >
+          className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-500">
           Live Demo
         </a>
       )}

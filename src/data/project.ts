@@ -17,7 +17,7 @@ const projects = [
       "Tailwind CSS",
       "Django",
     ],
-    
+
     live: "",
 
     featured: true,
@@ -31,7 +31,7 @@ const projects = [
     subtitle: "Education Consultancy Admin Dashboard",
 
     description:
-      "A responsive admin dashboard for managing website content and student inquiries.",
+      "A responsive admin dashboard developed for HimaAus to manage website content, services, student inquiries, appointments, and other administrative operations.",
 
     image: Himaaus,
 
