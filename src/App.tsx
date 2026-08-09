@@ -5,10 +5,12 @@ import Experience from "./component/sections/Experience"
 import Home from "./component/sections/Home"
 import Projects from "./component/sections/Projects"
 import Skills from "./component/sections/Skills"
+import EntryScreen from "./component/ui/EntryScreen"
 
 function App() {
   return (
     <>
+    <EntryScreen/>
     <Navbar/>
     <Home/>
     <About/>
