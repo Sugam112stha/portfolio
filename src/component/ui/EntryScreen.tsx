@@ -1,5 +1,5 @@
 import useEntryScreen from "../../hooks/EntryScreen";
-
+import logo from "../../assets/images/logo.png"
 
 const EntryScreen = () => {
   const { showEntry, progress } = useEntryScreen();
@@ -10,9 +10,10 @@ const EntryScreen = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
-      <h1 className="text-5xl font-bold text-slate-950">
-        Zorik<span className="text-slate-500">.</span>
-      </h1>
+       <img
+        src={logo}
+        alt="Zorik logo"
+        className="w-64"/>
 
       <div className="mt-8 h-1 w-48 overflow-hidden rounded-full bg-slate-700">
         <div
