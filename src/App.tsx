@@ -1,3 +1,4 @@
+import Footer from "./component/layouts/Footer"
 import Navbar from "./component/layouts/Navbar"
 import About from "./component/sections/About"
 import Contact from "./component/sections/Contact"
@@ -18,6 +19,7 @@ function App() {
     <Projects/>
     <Experience/>
     <Contact/>
+    <Footer/>
     </>
   )
 }
