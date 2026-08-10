@@ -4,7 +4,7 @@ import Resume from "../../assets/resume/Sugam_Shrestha.pdf"
 
 const Home = () => {
   return (
-    <section id="home" className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-12 px-6 pt-12 md:px-10 g:px-16 lg:pt-24">
+    <section id="home" className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-12 px-6 pt-12 md:px-10 g:px-16 lg:pt-30">
       <div className="max-w-7xl mx-auto pt-16">
         <div className="space-y-6">
           <p className="text-lg text-blue-400 font-medium"> Hello, I'm</p>
