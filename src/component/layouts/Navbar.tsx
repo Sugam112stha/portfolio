@@ -1,6 +1,7 @@
 import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 import logo1 from "../../assets/images/logo1.png"
+import Resume from "../../assets/resume/Sugam_Shrestha.pdf"
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,13 +49,13 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="flex justify-center pb-6">
-        <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 transition-all duration-300">
+        <a href={Resume}
+        download="Sugam_Shrestha.pdf"
+        className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105">
           <FiDownload />
           Download Resume
-        </button>
+        </a>
       </div>
-    </div>
   )
 }
     </>

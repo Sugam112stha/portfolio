@@ -1,5 +1,6 @@
 import { FiDownload } from "react-icons/fi";
 import ProfileImage from "../../assets/images/pic1.jpeg";
+import Resume from "../../assets/resume/Sugam_Shrestha.pdf"
 
 const Home = () => {
   return (
@@ -26,9 +27,12 @@ const Home = () => {
             <button className="px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105">
                 Hire me 
             </button>
-            <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105"> <FiDownload /> 
-                Download CV 
-            </button>
+           <a href={Resume}
+            download="Sugam_Shrestha.pdf"
+            className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105">
+            <FiDownload />
+              Download CV
+           </a>
             
           </div>
         </div>
