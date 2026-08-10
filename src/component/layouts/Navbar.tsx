@@ -1,65 +1,106 @@
 import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
-import logo1 from "../../assets/images/logo1.png"
-import Resume from "../../assets/resume/Sugam_Shrestha.pdf"
+import logo1 from "../../assets/images/logo1.png";
+import Resume from "../../assets/resume/Sugam_Shrestha.pdf";
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const navlinks = [
-        "Home",
-        "About",
-        "Skills",
-        "Projects",
-        "Experiences",
-        "Contact",
-    ];
+  const navItems = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
-    <nav className="sticky top-0 z-50 w-full bg-slate-900">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8 text-white">
-          <img src={logo1} alt="" className="w-24"/>
+      <nav className="fixed top-0 left-0 z-40 w-full bg-slate-950/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-16">
 
-            <ul className="hidden lg:flex items-center gap-10">
-                {navlinks.map((link)=> (
-                    <li key={link} className="cursor-pointer text-slate-300 transition-all duration-300 hover:text-blue-500 hover:scale-105"
-                     > {link}
-                    </li>
-                ))}
-            </ul>
+          {/* Logo */}
+          <a href="#home" onClick={handleNavClick}>
+            <img
+              src={logo1}
+              alt="Zorik Logo"
+              className="h-12 w-auto"
+            />
+          </a>
 
-            <button className="hidden lg:flex items-center gap-2 px-6 py-3 rounded-lg font-medium shadow-lg duration-500 transition-all bg-blue-600 hover:bg-blue-500 hover:-translate-y-1"> <FiDownload /> Download Resume 
-            </button>
-            <button className="lg:hidden text-3xl text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <FiX /> : <FiMenu />}
-            </button>
-        </div>
-    </nav>
-    {
-  isMenuOpen && (
-    <div className="lg:hidden bg-slate-900 border-t border-slate-800">
-      <ul className="flex flex-col items-center py-6 gap-6">
-        {navlinks.map((link) => (
-          <li
-            key={link}
-            className="text-slate-300 hover:text-blue-500 transition-all duration-300 cursor-pointer"
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-8 lg:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="cursor-pointer text-slate-300 transition-all duration-300 hover:scale-105 hover:text-blue-500"
+              >
+                {item.name}
+              </a>
+            ))}
+
+            {/* Desktop Resume */}
+            <a
+              href={Resume}
+              download="Sugam_Shrestha.pdf"
+              className="flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-blue-500"
+            >
+              <FiDownload />
+              Download Resume
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="text-3xl text-white lg:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {link}
-          </li>
-        ))}
-      </ul>
+            {isMenuOpen ? <FiX /> : <FiMenu />}
+          </button>
 
-        <a href={Resume}
-        download="Sugam_Shrestha.pdf"
-        className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 font-medium text-white transition-all duration-500 hover:bg-blue-500 hover:scale-105">
-          <FiDownload />
-          Download Resume
-        </a>
-      </div>
-  )
-}
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed left-0 top-[72px] z-30 w-full border-t border-slate-800 bg-slate-950 px-6 py-6 shadow-xl lg:hidden">
+
+          <div className="flex flex-col gap-5">
+
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={handleNavClick}
+                className="text-base font-medium text-slate-300 transition-colors duration-300 hover:text-blue-500"
+              >
+                {item.name}
+              </a>
+            ))}
+
+            {/* Mobile Resume */}
+            <a
+              href={Resume}
+              download="Sugam_Shrestha.pdf"
+              onClick={handleNavClick}
+              className="flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-blue-500"
+            >
+              <FiDownload />
+              Download Resume
+            </a>
+
+          </div>
+        </div>
+      )}
     </>
-  )
-}
+  );
+};
 
 export default Navbar;

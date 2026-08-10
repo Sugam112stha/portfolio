@@ -2,14 +2,14 @@ import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo1 from "../../assets/images/logo1.png"
 
 const Footer = () => {
-  const navlinks = [
-        "Home",
-        "About",
-        "Skills",
-        "Projects",
-        "Experiences",
-        "Contact",
-    ];
+  const navItems = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Contact", href: "#contact" },
+  ];
   return (
     <footer className="bg-slate-950 text-white">
       <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-16">
@@ -27,13 +27,15 @@ const Footer = () => {
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
-             <ul className="hidden lg:flex items-center gap-10">
-                {navlinks.map((link)=> (
-                    <li key={link} className="cursor-pointer text-slate-300 transition-all duration-300 hover:text-blue-500 hover:scale-105"
-                     > {link}
-                    </li>
-                ))}
-            </ul>
+             {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="cursor-pointer text-slate-300 transition-all duration-300 hover:scale-105 hover:text-blue-500"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
 
           {/* Social Links */}
