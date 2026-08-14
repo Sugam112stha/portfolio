@@ -1,6 +1,7 @@
 import AlphaMart from "../../src/assets/project/alpha-mart.png"
 import Himaaus from "../../src/assets/project/himaaus-dashboard.png"
 import HimaAus from "../assets/project/image.png"
+import NepArena from "../../src/assets/project/NepArena.png"
 const projects = [
 
   {
@@ -67,6 +68,27 @@ const projects = [
     ],
 
     live: "",
+
+    featured: true,
+  },
+
+  {
+    id: 4,
+    title: "NepArena",
+    subtitle: "Nepal's Competitive Esports Platform",
+
+    description:
+      "A competitive esports platform connecting Nepalese teams, players, tournaments, and rankings in one arena.",
+
+    image: NepArena,
+
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+
+    live: "https://nep-arena.vercel.app",
 
     featured: true,
   },
